@@ -2,18 +2,13 @@
 import exceptions
 from decimal import Decimal
 
-class Currency:
-	code = "XXX"
-	country = ""
-	countries = []
-	name = ""
-	numeric = "999"
-	exchange_rate = Decimal("1.0")
+class Currency(object):
 	def __init__(self, code="", numeric="999", name="", countries=[]):
 		self.code = code
 		self.numeric = numeric
 		self.name = name
 		self.countries = countries
+		self.exchange_rate = Decimal("1.0")
 	def __repr__(self):
 		return self.code
 	def set_exchange_rate(self, rate):
@@ -35,9 +30,7 @@ class IncorrectMoneyInputError(exceptions.Exception):
 	def __str__(self):
 		return "Incorrectly formatted monetary input!"
 
-class Money:
-	amount = Decimal("0.0")
-	currency = DEFAULT_CURRENCY
+class Money(object):
 	def __init__ (self, amount=Decimal("0.0"), currency=None):
 		if not isinstance(amount, Decimal):
 			amount = Decimal(str(amount))

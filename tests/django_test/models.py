@@ -1,11 +1,11 @@
 from django.db import models
 from money.contrib.django.models.fields import *
-from money import Money
-
 
 class Entity(models.Model):
     name = models.CharField(max_length=100)
-    price = MoneyField(max_digits=12, decimal_places=3)
+    price_amount = models.DecimalField(max_digits=12, decimal_places=3)
+    price_currency = models.CharField(max_length=3)
+    price = MoneyField('price_amount', 'price_currency')
     
     def __unicode__(self):
         return self.name + " " + str(self.price)
@@ -13,7 +13,9 @@ class Entity(models.Model):
 
 class Entity_0_USD(models.Model):
     name = models.CharField(max_length=100)
-    price = MoneyField(max_digits=12, decimal_places=3, default=Money(0, "USD"))
+    price_amount = models.DecimalField(max_digits=12, decimal_places=3, default=0)
+    price_currency = models.CharField(max_length=3, default='USD')
+    price = MoneyField('price_amount', 'price_currency')
     
     def __unicode__(self):
         return self.name + " " + str(self.price)
@@ -21,7 +23,9 @@ class Entity_0_USD(models.Model):
 
 class Entity_USD(models.Model):
     name = models.CharField(max_length=100)
-    price = MoneyField(max_digits=12, decimal_places=3, default_currency="USD")
+    price_amount = models.DecimalField(max_digits=12, decimal_places=3, default=0)
+    price_currency = models.CharField(max_length=3, default='USD')
+    price = MoneyField('price_amount', 'price_currency')
     
     def __unicode__(self):
         return self.name + " " + str(self.price)
