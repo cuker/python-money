@@ -38,5 +38,5 @@ setup(name='python-money',
       zip_safe=False,
       install_requires=[
       ],
-      #test_suite='tests.test_suite',
+      test_suite='tests.runtests.runtests',
       )
