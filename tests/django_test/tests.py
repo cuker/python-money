@@ -31,6 +31,10 @@ class MoneyFieldTestCase(TestCase):
         for code in CURRENCY:
             count = Entity.objects.filter(price_currency=code).count()
             self.assertTrue(count == 1)
+
+    def test_formating(self):
+        price = Money(100, "USD")
+        "%f" % price
     
     def testRetrive(self):
         price = Money(100, "USD")
