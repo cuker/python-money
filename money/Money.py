@@ -44,6 +44,8 @@ class Money(object):
             self.currency = currency
     def __repr__(self):
         return '%s %5.2f' % (self.currency, self.amount)
+    def __abs__(self):
+        return Money(amount=abs(self.amount), currency=self.currency)
     def __pos__(self):
         return Money(amount=self.amount, currency=self.currency)
     def __neg__(self):
