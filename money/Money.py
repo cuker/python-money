@@ -103,6 +103,8 @@ class Money(object):
         return Money(amount = self.amount.quantize(*args, **kwargs), currency=self.currency)
     def __format__(self, *args, **kwargs):
         return self.amount.__format__(*args, **kwargs)
+    def __nonzero__(self):
+        return self.amount__nonzero__()
     __radd__ = __add__
     __rsub__ = __sub__
     __rmul__ = __mul__
