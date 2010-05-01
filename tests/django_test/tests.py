@@ -23,7 +23,7 @@ class MoneyFieldTestCase(TestCase):
         ind = 0
         for code, currency in CURRENCY.items():
             ind = ind + 1
-            price = Money(ind*1000.0, code)
+            price = Money(ind*1000, code)
             Entity.objects.create(name=currency.name, price=price)
         count = Entity.objects.all().count()
         self.assertEqual(len(CURRENCY), count)
