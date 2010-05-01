@@ -100,7 +100,8 @@ class Money(object):
         Convert from one currency to another.
         """
         return None # TODO  (How??)
-
+    def quantize(self, *args, **kwargs):
+        return Money(amount = self.amount.quantize(*args, **kwargs), currency=self.currency)
     __radd__ = __add__
     __rsub__ = __sub__
     __rmul__ = __mul__
