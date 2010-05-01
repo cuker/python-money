@@ -77,10 +77,9 @@ class Money(object):
             return Money(amount = self.amount*other, currency = self.currency)
     def __div__(self, other):
         if isinstance(other, Money):
-            assert self.currency == other.currency, 'currency mismatch'
-            return self.amount / other.amount
+            raise TypeError, 'can not divide monetary quantities'
         else:
-            return self.amount / other
+            return Money(self.amount / other, currency = self.currency)
     def __rmod__(self, other):
         """
         Calculate percentage of an amount.  The left-hand side of the operator must be a numeric value.  E.g.:
