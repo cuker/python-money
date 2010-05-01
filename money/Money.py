@@ -104,7 +104,7 @@ class Money(object):
     def __format__(self, *args, **kwargs):
         return self.amount.__format__(*args, **kwargs)
     def __nonzero__(self):
-        return self.amount__nonzero__()
+        return self.amount.__nonzero__()
     __radd__ = __add__
     __rsub__ = __sub__
     __rmul__ = __mul__
