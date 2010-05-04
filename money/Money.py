@@ -173,20 +173,22 @@ class Money(object):
         """
         pass # TODO
 
-    def from_string(self, s):
+    @classmethod
+    def from_string(cls, s):
         """
         Parses a properly formatted string and extracts the monetary value and currency
         """
+        s = str(s).strip()
         try:
-            self.amount = Decimal(str(s).strip())
-            self.currency = DEFAULT_CURRENCY
+            amount = Decimal(s)
+            currency = DEFAULT_CURRENCY
         except:
             try:
-                s = s.strip()
-                self.currency = CURRENCY[s[:3].upper()]
-                self.amount = Decimal(s[3:].strip())
+                currency = CURRENCY[s[:3].upper()]
+                amount = Decimal(s[3:].strip())
             except:
                 raise IncorrectMoneyInputError
+        return cls(amount, currency)
 
 #
 # Definitions of ISO 4217 Currencies
