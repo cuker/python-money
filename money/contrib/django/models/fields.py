@@ -2,9 +2,9 @@ from django.db import models
 from django.utils.encoding import smart_unicode
 from money.contrib.django import forms
 from django.db.models import signals
-from money import Money 
+from money import Money, CURRENCY
 
-__all__ = ('MoneyField',)
+__all__ = ('MoneyField', 'CurrencyField')
 
 def strcurrency(val):
     if hasattr(val, 'code'):
@@ -36,8 +36,7 @@ class MoneyProxy(Money):
 
 class MoneyField(object):
     """
-    Provides a generic relation to any object through content-type/object-id
-    fields.
+    Provides a currency instance to any object through value/currency fields.
     """
 
     def __init__(self, value_field, currency_field):
@@ -88,4 +87,32 @@ class MoneyField(object):
     def get_db_prep_lookup(self, *args, **kwargs):
         raise NotImplemented
         
+class CurrencyField(models.CharField):
+    def __init__(self, *args, **kwargs):
+        kwargs.setdefault('max_length', 3)
+        def choices():
+            for key in CURRENCY.iterkeys():
+                yield key, key
+        kwargs.setdefault('choices', choices())
+        super(CurrencyField, self).__init__(*args, **kwargs)
 
+    def south_field_triple(self):
+        """
+        Return a suitable description of this field for South.
+        """
+        # We'll just introspect ourselves, since we inherit.
+        from south.modelsinspector import introspector
+        field_class = "django.db.models.fields.CharField"
+        args, kwargs = introspector(self)
+        # That's our definition!
+        return (field_class, args, kwargs)
+    """
+    def formfield(self, **kwargs):
+        defaults = dict(kwargs)
+        choices = [(key, key) ]
+        defaults = {'form_class': forms.TypedChoiceField,
+                    'choices': choices}
+        
+        defaults['widget'] = forms.ChoiceWidget(choices=choices) #TODO don't forcibly overide the widget being passed in
+        return super(CurrencyField, self).formfield(**defaults)
+    """
