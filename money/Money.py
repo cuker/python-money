@@ -8,21 +8,15 @@ class Currency(object):
         self.numeric = numeric
         self.name = name
         self.countries = countries
-        self.exchange_rate = Decimal("1.0")
+        self.exchange_rate = None
     def __repr__(self):
         return self.code
-    def set_exchange_rate(self, rate):
-        if not isinstance(rate, Decimal):
-            rate = Decimal(str(rate))
-        self.exchange_rate = rate
 
 CURRENCY = {}
 CURRENCY['XXX'] = Currency(code="XXX", numeric="999")
-DEFAULT_CURRENCY = CURRENCY['XXX']
 
-def set_default_currency(code="XXX"):
-    global DEFAULT_CURRENCY
-    DEFAULT_CURRENCY = CURRENCY[code]
+def get_default_currency():
+    return CURRENCY['XXX']
 
 class IncorrectMoneyInputError(exceptions.Exception):
     def __init__(self):
@@ -37,7 +31,7 @@ class Money(object):
         self.amount = amount
         self.allow_conversion = allow_conversion
         if not currency:
-            self.currency = DEFAULT_CURRENCY
+            self.currency = get_default_currency()
         else:
             if not isinstance(currency, Currency):
                 currency = CURRENCY[str(currency).upper()]
@@ -55,9 +49,10 @@ class Money(object):
             if self.currency == other.currency:
                 return Money(amount = self.amount + other.amount, currency = self.currency)
             else: 
+                assert self.allow_conversion
                 s = self.convert_to_default()
                 other = other.convert_to_default()
-                return Money(amount = s.amount + other.amount, currency = DEFAULT_CURRENCY)
+                return Money(amount = s.amount + other.amount, currency = get_default_currency())
         else:
             return Money(amount = self.amount + other, currency = self.currency)
     def __sub__(self, other):
@@ -65,9 +60,10 @@ class Money(object):
             if self.currency == other.currency:
                 return Money(amount = self.amount - other.amount, currency = self.currency)
             else: 
+                assert self.allow_conversion
                 s = self.convert_to_default()
                 other = other.convert_to_default()
-                return Money(amount = s.amount - other.amount, currency = DEFAULT_CURRENCY)
+                return Money(amount = s.amount - other.amount, currency = get_default_currency())
         else:
             return Money(amount = self.amount - other, currency = self.currency)
     def __mul__(self, other):
@@ -92,15 +88,24 @@ class Money(object):
         else:
             return Money(amount = other * self.amount / 100, currency = self.currency)
     def convert_to_default(self):
-        assert self.allow_conversion
-        return Money(amount = self.amount * self.currency.exchange_rate, currency=DEFAULT_CURRENCY)
+        assert self.currency.exchange_rate, 'No exchange rate defined'
+        return Money(amount = self.amount * self.currency.exchange_rate, currency=get_default_currency())
     def convert_to(self, currency):
         """
         Convert from one currency to another.
         """
-        return None # TODO  (How??)
+        assert currency.exchange_rate, 'No exchange rate defined'
+        if self.currency == get_default_currency():
+            ret = self.copy()
+        else:
+            ret = self.convert_to_default()
+        ret.amount /= currency.exchange_rate
+        ret.currency = currency
+        return ret
     def quantize(self, *args, **kwargs):
         return Money(amount = self.amount.quantize(*args, **kwargs), currency=self.currency)
+    def copy(self):
+        return Money(amount=self.amount, currency=self.currency)
     def __format__(self, *args, **kwargs):
         return self.amount.__format__(*args, **kwargs)
     def __float__(self):
@@ -181,7 +186,7 @@ class Money(object):
         s = str(s).strip()
         try:
             amount = Decimal(s)
-            currency = DEFAULT_CURRENCY
+            currency = get_default_currency()
         except:
             try:
                 currency = CURRENCY[s[:3].upper()]
