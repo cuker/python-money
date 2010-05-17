@@ -11,6 +11,12 @@ class Currency(object):
         self.exchange_rate = None
     def __repr__(self):
         return self.code
+    def __eq__(self, other):
+        if isinstance(other, Currency) or hasattr(other, 'code'):
+            return self.code == other.code
+        if isinstance(other, basestring):
+            return self.code == other
+        return super(Currency, self).__eq__(other)
 
 CURRENCY = {}
 CURRENCY['XXX'] = Currency(code="XXX", numeric="999")

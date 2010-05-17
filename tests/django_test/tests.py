@@ -36,6 +36,12 @@ class MoneyFieldTestCase(TestCase):
         price = Money(100, "USD")
         "%f" % price
     
+    def test_currency_compare(self):
+        cur = CURRENCY["USD"]
+        self.assertEqual('USD', cur)
+        self.assertNotEqual('EUR', cur)
+        self.assertEqual(cur, cur)
+    
     def testRetrive(self):
         price = Money(100, "USD")
         Entity.objects.create(name="one hundred dollars", price=price)
