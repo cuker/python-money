@@ -1,7 +1,9 @@
 from django.db import models
 from django.utils.encoding import smart_unicode
-from money.contrib.django import forms
 from django.db.models import signals
+from django.conf import settings
+
+from money.contrib.django import forms
 from money import Money, CURRENCY
 
 __all__ = ('MoneyField', 'CurrencyField')
@@ -90,10 +92,6 @@ class MoneyField(object):
 class CurrencyField(models.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 3)
-        def choices():
-            for key in CURRENCY.iterkeys():
-                yield key, key
-        kwargs.setdefault('choices', choices())
         super(CurrencyField, self).__init__(*args, **kwargs)
 
     def south_field_triple(self):
@@ -106,13 +104,20 @@ class CurrencyField(models.CharField):
         args, kwargs = introspector(self)
         # That's our definition!
         return (field_class, args, kwargs)
-    """
+    
     def formfield(self, **kwargs):
         defaults = dict(kwargs)
-        choices = [(key, key) ]
-        defaults = {'form_class': forms.TypedChoiceField,
-                    'choices': choices}
-        
-        defaults['widget'] = forms.ChoiceWidget(choices=choices) #TODO don't forcibly overide the widget being passed in
+        if 'money.contrib.django.currencies' in settings.INSTALLED_APPS:
+            from money.contrib.django.currencies.models import Currency
+            def choices():
+                for item in Currency.objects.active().iterator():
+                    yield item.code, item.code
+            defaults = {'form_class': forms.TypedChoiceField,
+                        'choices': choices}
+        else:
+            def choices():
+                for key in CURRENCY.iterkeys():
+                    yield key, key
+            defaults['widget'] = forms.ChoiceWidget(choices=choices)
         return super(CurrencyField, self).formfield(**defaults)
-    """
+    

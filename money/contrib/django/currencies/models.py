@@ -38,6 +38,9 @@ class Currency(models.Model, money.Currency):
         if self.default and self.pk:
             type(self).objects.exclude(pk=self.pk, default=False).update(default=False)
         return models.Model.save(self, *args, **kwargs)
+    
+    class Meta:
+        ordering = ['-default', 'code']
 
 ORIGINAL_CURRENCIES = money.CURRENCY
 money.CURRENCY = Currency.objects
