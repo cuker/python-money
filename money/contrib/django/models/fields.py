@@ -116,6 +116,6 @@ class CurrencyField(models.CharField):
             def choices():
                 for key in CURRENCY.iterkeys():
                     yield key, key
-        defaults['widget'] = forms.ChoiceWidget(choices=choices)
+        defaults['widget'] = forms.Select(choices=choices())
         return super(CurrencyField, self).formfield(**defaults)
     
