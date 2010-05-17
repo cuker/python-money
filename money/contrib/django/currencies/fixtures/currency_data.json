@@ -1,0 +1,1886 @@
+[
+  {
+    "pk": 1, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "DZD", 
+      "name": "Algerian Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "012", 
+      "exchange_rate": "73.7"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GHS", 
+      "name": "Ghana Cedi", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "936", 
+      "exchange_rate": "1.42"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "EGP", 
+      "name": "Egyptian Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "818", 
+      "exchange_rate": "5.6255"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BGN", 
+      "name": "Bulgarian Lev", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "975", 
+      "exchange_rate": "1.5903"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BMD", 
+      "name": "Bermudian Dollar (customarily known as Bermuda Dollar)", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "060", 
+      "exchange_rate": "0.9999"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "PHP", 
+      "name": "Philippine Peso", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "608", 
+      "exchange_rate": "45.215"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XBD", 
+      "name": "European Unit of Account 17(E.U.A.-17)", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "958", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XBA", 
+      "name": "Bond Markets Units European Composite Unit (EURCO)", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "955", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "DKK", 
+      "name": "Danish Krone", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "208", 
+      "exchange_rate": "6.0034"
+    }
+  }, 
+  {
+    "pk": 10, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XBC", 
+      "name": "European Unit of Account 9(E.U.A.-9)", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "957", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 11, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XBB", 
+      "name": "European Monetary Unit (E.M.U.-6)", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "956", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 12, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BWP", 
+      "name": "Pula", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "072", 
+      "exchange_rate": "7.0522"
+    }
+  }, 
+  {
+    "pk": 13, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LBP", 
+      "name": "Lebanese Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "422", 
+      "exchange_rate": "1501.5"
+    }
+  }, 
+  {
+    "pk": 14, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TZS", 
+      "name": "Tanzanian Shilling", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "834", 
+      "exchange_rate": "1423"
+    }
+  }, 
+  {
+    "pk": 15, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "VND", 
+      "name": "Dong", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "704", 
+      "exchange_rate": "19037.5"
+    }
+  }, 
+  {
+    "pk": 16, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AOA", 
+      "name": "Kwanza", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "973", 
+      "exchange_rate": "92.6075"
+    }
+  }, 
+  {
+    "pk": 17, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KHR", 
+      "name": "Riel", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "116", 
+      "exchange_rate": "4188.7998"
+    }
+  }, 
+  {
+    "pk": 18, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MYR", 
+      "name": "Malaysian Ringgit", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "458", 
+      "exchange_rate": "3.2275"
+    }
+  }, 
+  {
+    "pk": 19, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KYD", 
+      "name": "Cayman Islands Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "136", 
+      "exchange_rate": "0.8108"
+    }
+  }, 
+  {
+    "pk": 20, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LYD", 
+      "name": "Libyan Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "434", 
+      "exchange_rate": "1.3127"
+    }
+  }, 
+  {
+    "pk": 21, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "UAH", 
+      "name": "Hryvnia", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "980", 
+      "exchange_rate": "7.929"
+    }
+  }, 
+  {
+    "pk": 22, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "JOD", 
+      "name": "Jordanian Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "400", 
+      "exchange_rate": "0.7078"
+    }
+  }, 
+  {
+    "pk": 23, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AWG", 
+      "name": "Aruban Guilder", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "533", 
+      "exchange_rate": "1.7901"
+    }
+  }, 
+  {
+    "pk": 24, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SAR", 
+      "name": "Saudi Riyal", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "682", 
+      "exchange_rate": "3.7503"
+    }
+  }, 
+  {
+    "pk": 25, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XAG", 
+      "name": "Silver", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "961", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 26, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "HKD", 
+      "name": "Hong Kong Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "344", 
+      "exchange_rate": "7.8025"
+    }
+  }, 
+  {
+    "pk": 27, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CHF", 
+      "name": "Swiss Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "756", 
+      "exchange_rate": "1.131"
+    }
+  }, 
+  {
+    "pk": 28, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GIP", 
+      "name": "Gibraltar Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "292", 
+      "exchange_rate": "0.6909"
+    }
+  }, 
+  {
+    "pk": 29, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BYR", 
+      "name": "Belarussian Ruble", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "974", 
+      "exchange_rate": "2996"
+    }
+  }, 
+  {
+    "pk": 30, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XAU", 
+      "name": "Gold", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "959", 
+      "exchange_rate": "0.0008"
+    }
+  }, 
+  {
+    "pk": 31, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XPD", 
+      "name": "Palladium", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "964", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 32, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MRO", 
+      "name": "Ouguiya", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "478", 
+      "exchange_rate": "269.25"
+    }
+  }, 
+  {
+    "pk": 33, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "HRK", 
+      "name": "Croatian Kuna", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "191", 
+      "exchange_rate": "5.8988"
+    }
+  }, 
+  {
+    "pk": 34, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "DJF", 
+      "name": "Djibouti Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "262", 
+      "exchange_rate": "179.38"
+    }
+  }, 
+  {
+    "pk": 35, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "THB", 
+      "name": "Baht", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "764", 
+      "exchange_rate": "32.38"
+    }
+  }, 
+  {
+    "pk": 36, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BND", 
+      "name": "Brunei Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "096", 
+      "exchange_rate": "1.382"
+    }
+  }, 
+  {
+    "pk": 37, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ISK", 
+      "name": "Iceland Krona", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "352", 
+      "exchange_rate": "132.25"
+    }
+  }, 
+  {
+    "pk": 38, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "NIO", 
+      "name": "Cordoba Oro", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "558", 
+      "exchange_rate": "21.235"
+    }
+  }, 
+  {
+    "pk": 39, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LAK", 
+      "name": "Kip", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "418", 
+      "exchange_rate": "8293.7998"
+    }
+  }, 
+  {
+    "pk": 40, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SYP", 
+      "name": "Syrian Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "760", 
+      "exchange_rate": "46.95"
+    }
+  }, 
+  {
+    "pk": 41, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MAD", 
+      "name": "Moroccan Dirham", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "504", 
+      "exchange_rate": "8.7342"
+    }
+  }, 
+  {
+    "pk": 42, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MZN", 
+      "name": "Metical", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "943", 
+      "exchange_rate": "33.927"
+    }
+  }, 
+  {
+    "pk": 43, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TTD", 
+      "name": "Trinidad and Tobago Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "780", 
+      "exchange_rate": "6.39"
+    }
+  }, 
+  {
+    "pk": 44, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ZAR", 
+      "name": "Rand", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "710", 
+      "exchange_rate": "7.5675"
+    }
+  }, 
+  {
+    "pk": 45, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "PYG", 
+      "name": "Guarani", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "600", 
+      "exchange_rate": "4745"
+    }
+  }, 
+  {
+    "pk": 46, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "NGN", 
+      "name": "Naira", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "566", 
+      "exchange_rate": "150.75"
+    }
+  }, 
+  {
+    "pk": 47, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ZWD", 
+      "name": "Zimbabwe Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "716", 
+      "exchange_rate": "378.7"
+    }
+  }, 
+  {
+    "pk": 48, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CRC", 
+      "name": "Costa Rican Colon", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "188", 
+      "exchange_rate": "510.4"
+    }
+  }, 
+  {
+    "pk": 49, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AED", 
+      "name": "UAE Dirham", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "784", 
+      "exchange_rate": "3.673"
+    }
+  }, 
+  {
+    "pk": 50, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GBP", 
+      "name": "Pound Sterling", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "826", 
+      "exchange_rate": "0.6906"
+    }
+  }, 
+  {
+    "pk": 51, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MWK", 
+      "name": "Kwacha", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "454", 
+      "exchange_rate": "152.05"
+    }
+  }, 
+  {
+    "pk": 52, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LKR", 
+      "name": "Sri Lanka Rupee", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "144", 
+      "exchange_rate": "113.81"
+    }
+  }, 
+  {
+    "pk": 53, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SKK", 
+      "name": "Slovak Koruna", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "703", 
+      "exchange_rate": "21.573"
+    }
+  }, 
+  {
+    "pk": 54, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "PKR", 
+      "name": "Pakistan Rupee", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "586", 
+      "exchange_rate": "84.35"
+    }
+  }, 
+  {
+    "pk": 55, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "HUF", 
+      "name": "Forint", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "348", 
+      "exchange_rate": "226"
+    }
+  }, 
+  {
+    "pk": 56, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SZL", 
+      "name": "Lilangeni", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "748", 
+      "exchange_rate": "7.545"
+    }
+  }, 
+  {
+    "pk": 57, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BAM", 
+      "name": "Convertible Marks", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "977", 
+      "exchange_rate": "1.5813"
+    }
+  }, 
+  {
+    "pk": 58, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MNT", 
+      "name": "Tugrik", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "496", 
+      "exchange_rate": "1377.5"
+    }
+  }, 
+  {
+    "pk": 59, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AMD", 
+      "name": "Armenian Dram", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "051", 
+      "exchange_rate": "384.81"
+    }
+  }, 
+  {
+    "pk": 60, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "UGX", 
+      "name": "Uganda Shilling", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "800", 
+      "exchange_rate": "2155"
+    }
+  }, 
+  {
+    "pk": 61, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "QAR", 
+      "name": "Qatari Rial", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "634", 
+      "exchange_rate": "3.6407"
+    }
+  }, 
+  {
+    "pk": 62, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XDR", 
+      "name": "SDR", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "960", 
+      "exchange_rate": "0.6822"
+    }
+  }, 
+  {
+    "pk": 63, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "JMD", 
+      "name": "Jamaican Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "388", 
+      "exchange_rate": "88.53"
+    }
+  }, 
+  {
+    "pk": 64, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SCR", 
+      "name": "Seychelles Rupee", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "690", 
+      "exchange_rate": "12.105"
+    }
+  }, 
+  {
+    "pk": 65, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SHP", 
+      "name": "Saint Helena Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "654", 
+      "exchange_rate": "0.6909"
+    }
+  }, 
+  {
+    "pk": 66, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AFN", 
+      "name": "Afghani", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "971", 
+      "exchange_rate": "46.1"
+    }
+  }, 
+  {
+    "pk": 67, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MMK", 
+      "name": "Kyat", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "104", 
+      "exchange_rate": "6.51"
+    }
+  }, 
+  {
+    "pk": 68, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KPW", 
+      "name": "North Korean Won", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "408", 
+      "exchange_rate": "900.05"
+    }
+  }, 
+  {
+    "pk": 69, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MKD", 
+      "name": "Denar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "807", 
+      "exchange_rate": "49.745"
+    }
+  }, 
+  {
+    "pk": 70, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TRY", 
+      "name": "New Turkish Lira", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "949", 
+      "exchange_rate": "1.5518"
+    }
+  }, 
+  {
+    "pk": 71, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BDT", 
+      "name": "Taka", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "050", 
+      "exchange_rate": "69.375"
+    }
+  }, 
+  {
+    "pk": 72, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "YER", 
+      "name": "Yemeni Rial", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "886", 
+      "exchange_rate": "203.8"
+    }
+  }, 
+  {
+    "pk": 73, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MGA", 
+      "name": "Malagasy Ariary", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "969", 
+      "exchange_rate": "2055"
+    }
+  }, 
+  {
+    "pk": 74, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ANG", 
+      "name": "Netherlands Antillian Guilder", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "532", 
+      "exchange_rate": "1.792"
+    }
+  }, 
+  {
+    "pk": 75, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LRD", 
+      "name": "Liberian Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "430", 
+      "exchange_rate": "70.5"
+    }
+  }, 
+  {
+    "pk": 76, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XCD", 
+      "name": "East Caribbean Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "951", 
+      "exchange_rate": "2.685"
+    }
+  }, 
+  {
+    "pk": 77, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "NOK", 
+      "name": "Norwegian Krone", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "578", 
+      "exchange_rate": "6.2163"
+    }
+  }, 
+  {
+    "pk": 78, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MOP", 
+      "name": "Pataca", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "446", 
+      "exchange_rate": "8.0337"
+    }
+  }, 
+  {
+    "pk": 79, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "INR", 
+      "name": "Indian Rupee", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "356", 
+      "exchange_rate": "45.71"
+    }
+  }, 
+  {
+    "pk": 80, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CZK", 
+      "name": "Czech Koruna", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "203", 
+      "exchange_rate": "20.62"
+    }
+  }, 
+  {
+    "pk": 81, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TJS", 
+      "name": "Somoni", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "972", 
+      "exchange_rate": "4.3681"
+    }
+  }, 
+  {
+    "pk": 82, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "NPR", 
+      "name": "Nepalese Rupee", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "524", 
+      "exchange_rate": "73.1"
+    }
+  }, 
+  {
+    "pk": 83, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KMF", 
+      "name": "Comoro Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "174", 
+      "exchange_rate": "397.7"
+    }
+  }, 
+  {
+    "pk": 84, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MUR", 
+      "name": "Mauritius Rupee", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "480", 
+      "exchange_rate": "32.8"
+    }
+  }, 
+  {
+    "pk": 85, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "IDR", 
+      "name": "Rupiah", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "360", 
+      "exchange_rate": "9140"
+    }
+  }, 
+  {
+    "pk": 86, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "HNL", 
+      "name": "Lempira", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "340", 
+      "exchange_rate": "18.92"
+    }
+  }, 
+  {
+    "pk": 87, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ETB", 
+      "name": "Ethiopian Birr", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "230", 
+      "exchange_rate": "13.5358"
+    }
+  }, 
+  {
+    "pk": 88, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "FJD", 
+      "name": "Fiji Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "242", 
+      "exchange_rate": "1.9804"
+    }
+  }, 
+  {
+    "pk": 89, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "VUV", 
+      "name": "Vatu", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "548", 
+      "exchange_rate": "99.15"
+    }
+  }, 
+  {
+    "pk": 90, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "PEN", 
+      "name": "Nuevo Sol", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "604", 
+      "exchange_rate": "2.84"
+    }
+  }, 
+  {
+    "pk": 91, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BZD", 
+      "name": "Belize Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "084", 
+      "exchange_rate": "1.95"
+    }
+  }, 
+  {
+    "pk": 92, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ILS", 
+      "name": "New Israeli Sheqel", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "376", 
+      "exchange_rate": "3.7725"
+    }
+  }, 
+  {
+    "pk": 93, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "DOP", 
+      "name": "Dominican Peso", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "214", 
+      "exchange_rate": "36.75"
+    }
+  }, 
+  {
+    "pk": 94, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TMM", 
+      "name": "Manat", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "795", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 95, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TWD", 
+      "name": "New Taiwan Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "901", 
+      "exchange_rate": "31.815"
+    }
+  }, 
+  {
+    "pk": 96, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XFO", 
+      "name": "Gold-Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "Nil", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 97, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XPT", 
+      "name": "Platinum", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "962", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 98, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BSD", 
+      "name": "Bahamian Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "044", 
+      "exchange_rate": "1"
+    }
+  }, 
+  {
+    "pk": 99, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SEK", 
+      "name": "Swedish Krona", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "752", 
+      "exchange_rate": "7.7136"
+    }
+  }, 
+  {
+    "pk": 100, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ZMK", 
+      "name": "Kwacha", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "894", 
+      "exchange_rate": "4950"
+    }
+  }, 
+  {
+    "pk": 101, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MVR", 
+      "name": "Rufiyaa", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "462", 
+      "exchange_rate": "12.805"
+    }
+  }, 
+  {
+    "pk": 102, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "MDL", 
+      "name": "Moldovan Leu", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "498", 
+      "exchange_rate": "12.71"
+    }
+  }, 
+  {
+    "pk": 103, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XTS", 
+      "name": "Codes specifically reserved for testing purposes", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "963", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 104, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AUD", 
+      "name": "Australian Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "036", 
+      "exchange_rate": "1.1391"
+    }
+  }, 
+  {
+    "pk": 105, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SRD", 
+      "name": "Surinam Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "968", 
+      "exchange_rate": "2.7483"
+    }
+  }, 
+  {
+    "pk": 106, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CUP", 
+      "name": "Cuban Peso", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "192", 
+      "exchange_rate": "1"
+    }
+  }, 
+  {
+    "pk": 107, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BBD", 
+      "name": "Barbados Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "052", 
+      "exchange_rate": "2.005"
+    }
+  }, 
+  {
+    "pk": 108, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KRW", 
+      "name": "Won", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "410", 
+      "exchange_rate": "1152.4"
+    }
+  }, 
+  {
+    "pk": 109, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GMD", 
+      "name": "Dalasi", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "270", 
+      "exchange_rate": "27.05"
+    }
+  }, 
+  {
+    "pk": 110, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "VEF", 
+      "name": "Bolivar Fuerte", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "937", 
+      "exchange_rate": "4.2963"
+    }
+  }, 
+  {
+    "pk": 111, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GTQ", 
+      "name": "Quetzal", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "320", 
+      "exchange_rate": "7.995"
+    }
+  }, 
+  {
+    "pk": 112, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GEL", 
+      "name": "Lari", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "981", 
+      "exchange_rate": "1.7805"
+    }
+  }, 
+  {
+    "pk": 113, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "EUR", 
+      "name": "Euro", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "978", 
+      "exchange_rate": "0.8068"
+    }
+  }, 
+  {
+    "pk": 114, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ALL", 
+      "name": "Lek", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "008", 
+      "exchange_rate": "110.42"
+    }
+  }, 
+  {
+    "pk": 115, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "RWF", 
+      "name": "Rwanda Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "646", 
+      "exchange_rate": "579"
+    }
+  }, 
+  {
+    "pk": 116, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KZT", 
+      "name": "Tenge", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "398", 
+      "exchange_rate": "146.76"
+    }
+  }, 
+  {
+    "pk": 117, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XPF", 
+      "name": "CFP Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "953", 
+      "exchange_rate": "96.825"
+    }
+  }, 
+  {
+    "pk": 118, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "RUB", 
+      "name": "Russian Ruble", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "643", 
+      "exchange_rate": "30.585"
+    }
+  }, 
+  {
+    "pk": 119, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "XFU", 
+      "name": "UIC-Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "Nil", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 120, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "OMR", 
+      "name": "Rial Omani", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "512", 
+      "exchange_rate": "0.3851"
+    }
+  }, 
+  {
+    "pk": 121, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BRL", 
+      "name": "Brazilian Real", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "986", 
+      "exchange_rate": "1.8193"
+    }
+  }, 
+  {
+    "pk": 122, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SBD", 
+      "name": "Solomon Islands Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "090", 
+      "exchange_rate": "7.8703"
+    }
+  }, 
+  {
+    "pk": 123, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "PLN", 
+      "name": "Zloty", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "985", 
+      "exchange_rate": "3.2426"
+    }
+  }, 
+  {
+    "pk": 124, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KES", 
+      "name": "Kenyan Shilling", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "404", 
+      "exchange_rate": "78.65"
+    }
+  }, 
+  {
+    "pk": 125, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "USD", 
+      "name": "US Dollar", 
+      "default": true, 
+      "enabled": true, 
+      "numeric": "840", 
+      "exchange_rate": null
+    }
+  }, 
+  {
+    "pk": 126, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "EEK", 
+      "name": "Kroon", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "233", 
+      "exchange_rate": "12.6992"
+    }
+  }, 
+  {
+    "pk": 127, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "AZN", 
+      "name": "Azerbaijanian Manat", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "944", 
+      "exchange_rate": "0.8036"
+    }
+  }, 
+  {
+    "pk": 128, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TOP", 
+      "name": "Paanga", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "776", 
+      "exchange_rate": "1.9643"
+    }
+  }, 
+  {
+    "pk": 129, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GNF", 
+      "name": "Guinea Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "324", 
+      "exchange_rate": "5007.5"
+    }
+  }, 
+  {
+    "pk": 130, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "WST", 
+      "name": "Tala", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "882", 
+      "exchange_rate": "2.4756"
+    }
+  }, 
+  {
+    "pk": 131, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "IQD", 
+      "name": "Iraqi Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "368", 
+      "exchange_rate": "1168.5"
+    }
+  }, 
+  {
+    "pk": 132, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ERN", 
+      "name": "Nakfa", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "232", 
+      "exchange_rate": "0"
+    }
+  }, 
+  {
+    "pk": 133, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CVE", 
+      "name": "Cape Verde Escudo", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "132", 
+      "exchange_rate": "85.51"
+    }
+  }, 
+  {
+    "pk": 134, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CAD", 
+      "name": "Canadian Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "124", 
+      "exchange_rate": "1.036"
+    }
+  }, 
+  {
+    "pk": 135, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "GYD", 
+      "name": "Guyana Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "328", 
+      "exchange_rate": "205.45"
+    }
+  }, 
+  {
+    "pk": 136, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KWD", 
+      "name": "Kuwaiti Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "414", 
+      "exchange_rate": "0.292"
+    }
+  }, 
+  {
+    "pk": 137, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BIF", 
+      "name": "Burundi Franc", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "108", 
+      "exchange_rate": "1232.17"
+    }
+  }, 
+  {
+    "pk": 138, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "PGK", 
+      "name": "Kina", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "598", 
+      "exchange_rate": "2.7544"
+    }
+  }, 
+  {
+    "pk": 139, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SOS", 
+      "name": "Somali Shilling", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "706", 
+      "exchange_rate": "1550"
+    }
+  }, 
+  {
+    "pk": 140, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SGD", 
+      "name": "Singapore Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "702", 
+      "exchange_rate": "1.3895"
+    }
+  }, 
+  {
+    "pk": 141, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "UZS", 
+      "name": "Uzbekistan Sum", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "860", 
+      "exchange_rate": "1572.3"
+    }
+  }, 
+  {
+    "pk": 142, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "STD", 
+      "name": "Dobra", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "678", 
+      "exchange_rate": "18040"
+    }
+  }, 
+  {
+    "pk": 143, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "IRR", 
+      "name": "Iranian Rial", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "364", 
+      "exchange_rate": "9950"
+    }
+  }, 
+  {
+    "pk": 144, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "CNY", 
+      "name": "Yuan Renminbi", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "156", 
+      "exchange_rate": "6.832"
+    }
+  }, 
+  {
+    "pk": 145, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SLL", 
+      "name": "Leone", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "694", 
+      "exchange_rate": "3875"
+    }
+  }, 
+  {
+    "pk": 146, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "TND", 
+      "name": "Tunisian Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "788", 
+      "exchange_rate": "1.4845"
+    }
+  }, 
+  {
+    "pk": 147, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "NZD", 
+      "name": "New Zealand Dollar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "554", 
+      "exchange_rate": "1.4341"
+    }
+  }, 
+  {
+    "pk": 148, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "FKP", 
+      "name": "Falkland Islands Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "238", 
+      "exchange_rate": "0.6908"
+    }
+  }, 
+  {
+    "pk": 149, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LVL", 
+      "name": "Latvian Lats", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "428", 
+      "exchange_rate": "0.5743"
+    }
+  }, 
+  {
+    "pk": 150, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "KGS", 
+      "name": "Som", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "417", 
+      "exchange_rate": "45.245"
+    }
+  }, 
+  {
+    "pk": 151, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "ARS", 
+      "name": "Argentine Peso", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "032", 
+      "exchange_rate": "3.8965"
+    }
+  }, 
+  {
+    "pk": 152, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "RON", 
+      "name": "New Leu", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "946", 
+      "exchange_rate": "3.4121"
+    }
+  }, 
+  {
+    "pk": 153, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "RSD", 
+      "name": "Serbian Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "941", 
+      "exchange_rate": "81.5205"
+    }
+  }, 
+  {
+    "pk": 154, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "BHD", 
+      "name": "Bahraini Dinar", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "048", 
+      "exchange_rate": "0.3771"
+    }
+  }, 
+  {
+    "pk": 155, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "LTL", 
+      "name": "Lithuanian Litas", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "440", 
+      "exchange_rate": "2.8069"
+    }
+  }, 
+  {
+    "pk": 156, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "JPY", 
+      "name": "Yen", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "392", 
+      "exchange_rate": "92.605"
+    }
+  }, 
+  {
+    "pk": 157, 
+    "model": "currencies.currency", 
+    "fields": {
+      "code": "SDG", 
+      "name": "Sudanese Pound", 
+      "default": false, 
+      "enabled": true, 
+      "numeric": "938", 
+      "exchange_rate": "2.23"
+    }
+  }
+]

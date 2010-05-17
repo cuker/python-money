@@ -1,6 +1,7 @@
 from django.db import models
 from django.conf import settings
 import money
+from decimal import Decimal
 
 class CurrencyManager(models.Manager):
     def active(self):
@@ -18,9 +19,9 @@ class CurrencyManager(models.Manager):
 class Currency(models.Model, money.Currency):
     name = models.CharField(max_length=60)
     code = models.CharField(max_length=5, unique=True)
-    numeric = models.CharField(max_length=5, unique=True)
+    numeric = models.CharField(max_length=5)
     enabled = models.BooleanField(default=True, db_index=True)
-    exchange_rate = models.DecimalField(max_digits=10, decimal_places=5)
+    exchange_rate = models.DecimalField(max_digits=10, decimal_places=5, null=True, blank=True)
     
     default = models.BooleanField(default=False, db_index=True)
     
@@ -54,3 +55,20 @@ def _load_currencies():
         new_default = Currency.objects['USD']
         new_default.default = True
         new_default.save()
+
+def _load_exchange_rates():
+    import urllib
+    from_currency = Currency.objects.default()
+    kwargs = {'from':from_currency.code,}
+    url = 'http://quote.yahoo.com/d/quotes.csv?s=%(from)s%(to)s=X&f=l1&e=.csv'
+    for target in Currency.objects.filter(default=False):
+        kwargs['to'] = target.code
+        response = urllib.urlopen(url % kwargs).read()
+        try:
+            target.exchange_rate = Decimal(response.strip())
+        except ValueError:
+            pass
+        else:
+            target.save()
+
+
