@@ -1,17 +1,35 @@
 from django.db import models
-from django.utils.encoding import smart_unicode
 from django.db.models import signals
-from django.conf import settings
-from django import forms
 
-from money import Money, currency_provider
+from money import Money
+from models import Currency
 
 __all__ = ('MoneyField', 'CurrencyField')
 
-def strcurrency(val):
-    if hasattr(val, 'code'):
-        return val.code
-    return str(val)
+def lookup_currency(currency):
+    if not isinstance(currency, Currency):
+        if hasattr(currency, 'code'):
+            code = currency.code
+        else:
+            code = str(currency)
+        return Currency.objects.get(code=code)
+    return currency
+
+class CurrencyField(models.ForeignKey):
+    def __init__(self, *args, **kwargs):
+        kwargs['limit_choices_to'] = {'enabled':True}
+        super(CurrencyField, self).__init__(Currency, *args, **kwargs)
+    
+    def south_field_triple(self):
+        """
+        Return a suitable description of this field for South.
+        """
+        # We'll just introspect ourselves, since we inherit.
+        from south.modelsinspector import introspector
+        field_class = "django.db.models.ForeignKey"
+        args, kwargs = introspector(self)
+        # That's our definition!
+        return (field_class, args, kwargs)
 
 class MoneyProxy(Money):
     def __init__(self, field, instance, amount, currency):
@@ -27,6 +45,7 @@ class MoneyProxy(Money):
         return self._amount
     
     def _set_currency(self, currency):
+        currency = lookup_currency(currency)
         self._currency = currency
         setattr(self.instance, self.field.currency_field, currency)
         
@@ -81,35 +100,10 @@ class MoneyField(object):
         currency = None
         if value is not None:
             amount = value.amount
-            currency = value.currency.code
+            currency = lookup_currency(value.currency)
         
         setattr(instance, self.value_field, amount)
         setattr(instance, self.currency_field, currency)
     
     def get_db_prep_lookup(self, *args, **kwargs):
         raise NotImplemented
-
-class CurrencyField(models.CharField):
-    def __init__(self, *args, **kwargs):
-        kwargs.setdefault('max_length', 3)
-        super(CurrencyField, self).__init__(*args, **kwargs)
-
-    def south_field_triple(self):
-        """
-        Return a suitable description of this field for South.
-        """
-        # We'll just introspect ourselves, since we inherit.
-        from south.modelsinspector import introspector
-        field_class = "django.db.models.fields.CharField"
-        args, kwargs = introspector(self)
-        # That's our definition!
-        return (field_class, args, kwargs)
-    
-    def formfield(self, **kwargs):
-        defaults = dict(kwargs)
-        def choices():
-            for key in currency_provider().iterkeys():
-                yield key, key
-        defaults['widget'] = forms.Select(choices=choices())
-        return super(CurrencyField, self).formfield(**defaults)
-    

@@ -10,15 +10,17 @@ class CurrencyManager(models.Manager):
     def default(self):
         return self.get(default=True)
     
+    get_default = default
+    
     def __getitem__(self, code):
         try:
             return self.get(code=code)
         except self.model.DoesNotExist:
-            return ORIGINAL_CURRENCIES[code]
+            raise KeyError, 'currency "%s" was not found' % code
 
 class Currency(models.Model, money.Currency):
     name = models.CharField(max_length=60)
-    code = models.CharField(max_length=5, unique=True)
+    code = models.CharField(max_length=3, primary_key=True)
     numeric = models.CharField(max_length=5)
     enabled = models.BooleanField(default=True, db_index=True)
     exchange_rate = models.DecimalField(max_digits=10, decimal_places=5, null=True, blank=True)
@@ -42,9 +44,8 @@ class Currency(models.Model, money.Currency):
     class Meta:
         ordering = ['-default', 'code']
 
-ORIGINAL_CURRENCIES = money.CURRENCY
-money.CURRENCY = Currency.objects
-money.get_default_currency = lambda: Currency.objects.default
+ORIGINAL_CURRENCIES = money.currency_provider()
+money.set_currency_provider(Currency.objects)
 
 def _load_currencies():
     for key, value in ORIGINAL_CURRENCIES.iteritems():

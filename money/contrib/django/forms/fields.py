@@ -1,7 +1,7 @@
 from django.utils.translation import ugettext_lazy as _
 from django import forms
 from widgets import InputMoneyWidget
-from money import Money, CURRENCY
+from money import Money, currency_provider
 
 __all__ = ('MoneyField',)
 
@@ -19,6 +19,6 @@ class MoneyField(forms.DecimalField):
         if not currency:
             raise forms.ValidationError(_(u'Input currency'))
         currency = currency.upper()
-        if not CURRENCY.get(currency, False) or currency == u'XXX':
+        if not currency_provider().get(currency, False) or currency == u'XXX':
             raise forms.ValidationError(_(u'This currency not exist'))
         return Money(amount=amount, currency=currency)
