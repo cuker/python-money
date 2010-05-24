@@ -1,5 +1,4 @@
 from django.db import models
-from django.utils.encoding import smart_unicode
 from django.db.models import signals
 from django.conf import settings
 from django import forms
@@ -18,21 +17,21 @@ class MoneyProxy(Money):
         self.field = field
         self.instance = instance
         super(MoneyProxy, self).__init__(amount, currency)
-    
+
     def _set_amount(self, amount):
         self._amount = amount
         setattr(self.instance, self.field.value_field, amount)
-        
+
     def _get_amount(self):
         return self._amount
-    
+
     def _set_currency(self, currency):
         self._currency = currency
-        setattr(self.instance, self.field.currency_field, currency)
-        
+        setattr(self.instance, self.field.currency_field, strcurrency(currency))
+
     def _get_currency(self):
         return self._currency
-        
+
     amount = property(_get_amount, _set_amount)
     currency = property(_get_currency, _set_currency)
 
@@ -44,6 +43,24 @@ class MoneyField(object):
     def __init__(self, value_field, currency_field):
         self.value_field = value_field
         self.currency_field = currency_field
+
+    def __get__(self, instance, instance_type=None):
+        if instance is None:
+            return self
+        return self._money_from_instance(instance)
+
+    def __set__(self, instance, value):
+        if instance is None:
+            raise AttributeError, u"%s must be accessed via instance" % self.name
+
+        amount = None
+        currency = None
+        if value is not None:
+            amount = value.amount
+            currency = value.currency.code
+
+        setattr(instance, self.value_field, amount)
+        setattr(instance, self.currency_field, currency)
 
     def contribute_to_class(self, cls, name):
         self.name = name
@@ -67,25 +84,6 @@ class MoneyField(object):
             else:
                 kwargs[self.value_field] = value
 
-    def __get__(self, instance, instance_type=None):
-        if instance is None:
-            return self
-
-        return self._money_from_instance(instance)
-
-    def __set__(self, instance, value):
-        if instance is None:
-            raise AttributeError, u"%s must be accessed via instance" % self.name
-
-        amount = None
-        currency = None
-        if value is not None:
-            amount = value.amount
-            currency = value.currency.code
-        
-        setattr(instance, self.value_field, amount)
-        setattr(instance, self.currency_field, currency)
-    
     def get_db_prep_lookup(self, *args, **kwargs):
         raise NotImplemented
 
@@ -104,12 +102,12 @@ class CurrencyField(models.CharField):
         args, kwargs = introspector(self)
         # That's our definition!
         return (field_class, args, kwargs)
-    
+
     def formfield(self, **kwargs):
         defaults = dict(kwargs)
         def choices():
+            yield '', '--'
             for key in currency_provider().iterkeys():
                 yield key, key
         defaults['widget'] = forms.Select(choices=choices())
         return super(CurrencyField, self).formfield(**defaults)
-    
