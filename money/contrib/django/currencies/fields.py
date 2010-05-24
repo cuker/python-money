@@ -46,11 +46,10 @@ class MoneyProxy(Money):
     
     def _set_currency(self, currency):
         currency = lookup_currency(currency)
-        self._currency = currency
         setattr(self.instance, self.field.currency_field, currency)
         
     def _get_currency(self):
-        return self._currency
+        return getattr(self.instance, self.field.currency_field)
         
     amount = property(_get_amount, _set_amount)
     currency = property(_get_currency, _set_currency)
@@ -82,7 +81,7 @@ class MoneyField(object):
             value = kwargs.pop(self.name)
             if isinstance(value, Money):
                 kwargs[self.value_field] = value.amount
-                kwargs[self.currency_field] = value.currency.code
+                kwargs[self.currency_field] = lookup_currency(value.currency)
             else:
                 kwargs[self.value_field] = value
 
