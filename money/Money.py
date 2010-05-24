@@ -100,7 +100,7 @@ class Money(object):
         if self.currency == currency_provider().get_default():
             return self.copy()
         assert self.currency.exchange_rate, 'No exchange rate defined for: %s' % self.currency
-        return Money(amount = self.amount * self.currency.exchange_rate, currency=currency_provider().get_default())
+        return Money(amount = self.amount / self.currency.exchange_rate, currency=currency_provider().get_default())
     def convert_to(self, currency):
         """
         Convert from one currency to another.
@@ -110,7 +110,7 @@ class Money(object):
             ret = self.copy()
         else:
             ret = self.convert_to_default()
-        ret.amount /= currency.exchange_rate
+        ret.amount *= currency.exchange_rate
         ret.currency = currency
         return ret
     def quantize(self, *args, **kwargs):

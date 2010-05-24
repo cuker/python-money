@@ -43,6 +43,7 @@ class Currency(models.Model, money.Currency):
     
     class Meta:
         ordering = ['-default', 'code']
+        verbose_name_plural = "currencies"
 
 ORIGINAL_CURRENCIES = money.currency_provider()
 money.set_currency_provider(Currency.objects)

@@ -1,6 +1,7 @@
 from unittest import TestCase
 from django_test.models import Entity, Entity_0_USD, Entity_USD
-from money import Money, CURRENCY
+from money import Money
+from money.currencies import CURRENCY
 
 def pause(): raw_input("Press enter to continue")
 
