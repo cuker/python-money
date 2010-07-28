@@ -4,7 +4,7 @@
     "model": "currencies.currency", 
     "fields": {
       "default": true, 
-      "exchange_rate": null, 
+      "exchange_rate": 1, 
       "enabled": true, 
       "name": "US Dollar", 
       "numeric": "840"
