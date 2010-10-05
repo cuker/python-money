@@ -195,14 +195,19 @@ class Money(object):
         Parses a properly formatted string and extracts the monetary value and currency
         """
         s = str(s).strip()
+        sign = 1
+        if s.startswith('-'):
+            sign = -1
+            s = s[1:].strip()
         try:
             amount = Decimal(s)
             currency = currency_provider().get_default()
         except:
             try:
-                currency = currency_provider()[s[:3].upper()]
-                amount = Decimal(s[3:].strip())
+                currency, amount = s.split(' ',1)
+                currency = currency_provider()[currency.strip().upper()]
+                amount = Decimal(amount.strip())
             except:
                 raise IncorrectMoneyInputError
-        return cls(amount, currency)
+        return cls(amount*sign, currency)
 
