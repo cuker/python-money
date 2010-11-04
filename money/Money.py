@@ -25,7 +25,7 @@ class Currency(object):
             return self.code == other.code
         if isinstance(other, basestring):
             return self.code == other
-        return super(Currency, self).__eq__(other)
+        return False #don't know how to compare otherwise
 
 class IncorrectMoneyInputError(exceptions.Exception):
     def __init__(self):
