@@ -11,21 +11,24 @@ def set_currency_provider(provider):
     global _CURRENCY_PROVIDER
     _CURRENCY_PROVIDER = provider
 
-class Currency(object):
+class BaseCurrency(object):
+    def __repr__(self):
+        return self.code
+    
+    def __eq__(self, other):
+        if isinstance(other, BaseCurrency) or hasattr(other, 'code'):
+            return self.code == other.code
+        if isinstance(other, basestring):
+            return self.code == other
+        return False #don't know how to compare otherwise
+
+class Currency(BaseCurrency):
     def __init__(self, code="", numeric="999", name="", countries=[]):
         self.code = code
         self.numeric = numeric
         self.name = name
         self.countries = countries
         self.exchange_rate = None
-    def __repr__(self):
-        return self.code
-    def __eq__(self, other):
-        if isinstance(other, Currency) or hasattr(other, 'code'):
-            return self.code == other.code
-        if isinstance(other, basestring):
-            return self.code == other
-        return False #don't know how to compare otherwise
 
 class IncorrectMoneyInputError(exceptions.Exception):
     def __init__(self):
@@ -42,7 +45,7 @@ class Money(object):
         if not currency:
             self.currency = currency_provider().get_default()
         else:
-            if not isinstance(currency, Currency):
+            if not isinstance(currency, BaseCurrency):
                 currency =currency_provider()[str(currency).upper()] #consider, may result in lots of db queries...
             self.currency = currency
     def __repr__(self):

@@ -18,7 +18,7 @@ class CurrencyManager(models.Manager):
         except self.model.DoesNotExist:
             raise KeyError, 'currency "%s" was not found' % code
 
-class Currency(models.Model, money.Currency):
+class Currency(models.Model, money.BaseCurrency):
     name = models.CharField(max_length=60)
     code = models.CharField(max_length=3, primary_key=True)
     numeric = models.CharField(max_length=5)
