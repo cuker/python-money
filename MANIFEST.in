@@ -1,0 +1,1 @@
+recursive-include money/contrib/django/currencies/fixtures *
