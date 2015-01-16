@@ -18,6 +18,9 @@ def lookup_currency(currency):
 class CurrencyField(models.ForeignKey):
     def __init__(self, *args, **kwargs):
         kwargs['limit_choices_to'] = {'enabled':True}
+        # the 'to' field is manually set as the first unnamed
+        # parameter, on the last line of this function.
+        kwargs.pop('to', None)
         super(CurrencyField, self).__init__(Currency, *args, **kwargs)
     
     def south_field_triple(self):
