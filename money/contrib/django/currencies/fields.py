@@ -23,6 +23,10 @@ class CurrencyField(models.ForeignKey):
         kwargs.pop('to', None)
         super(CurrencyField, self).__init__(Currency, *args, **kwargs)
     
+    def deconstruct(self):
+        name, path, args, kwargs = super(CurrencyField, self).deconstruct()
+        del(kwargs['to'])
+        return (name, path, args, kwargs)
     def south_field_triple(self):
         """
         Return a suitable description of this field for South.
